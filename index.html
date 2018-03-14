@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/w3.css">
     <link rel="stylesheet" href="css/font-Lato.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js" integrity="sha256-1hjUhpc44NwiNg8OwMu2QzJXhD8kcj+sJA3aCQZoUjg=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery.min.js"></script>
@@ -372,7 +372,6 @@
         for (var i = 0; i < eles.length; i += 2) {
             var ele1 = eles[i], ele2 = eles[i + 1];
             var diffDate = new Date(new Date() - start[(ele1.id).substr(0, (ele1.id).length - 1)]);
-            console.log(diffDate.toISOString());
             var years = diffDate.getFullYear() - 1970;
             var months = diffDate.getMonth() + 1;
             var days = diffDate.getDate();
@@ -1031,30 +1030,30 @@
     </script>
 
     <!-- Add Google Maps -->
-    <script src="js/api.map.js"></script>
+    <!-- <script src="js/api.map.js"></script> -->
     <!--<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>-->
     <script>
-        var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+        // var myCenter = new google.maps.LatLng(41.878114, -87.629798);
 
-        function initialize() {
-            var mapProp = {
-                center: myCenter,
-                zoom: 12,
-                scrollwheel: false,
-                draggable: false,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
+        // function initialize() {
+        //     var mapProp = {
+        //         center: myCenter,
+        //         zoom: 12,
+        //         scrollwheel: false,
+        //         draggable: false,
+        //         mapTypeId: google.maps.MapTypeId.ROADMAP
+        //     };
 
-            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        //     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
-            var marker = new google.maps.Marker({
-                position: myCenter,
-            });
+        //     var marker = new google.maps.Marker({
+        //         position: myCenter,
+        //     });
 
-            marker.setMap(map);
-        }
+        //     marker.setMap(map);
+        // }
 
-        google.maps.event.addDomListener(window, 'load', initialize);
+        // google.maps.event.addDomListener(window, 'load', initialize);
 
         // Modal Image Gallery
         function onClick(element) {
@@ -1111,7 +1110,7 @@
         sendModalNum('1');
         sendModalNum('2');
         sendModalNum('3');
-        sendModalNum('5');
+        //sendModalNum('5');
         function sendModalNum(num) {
             SSNum = num;
             slideIndex = 1;
@@ -1146,7 +1145,7 @@
                 dots[i].className = dots[i].className.replace(" w3-blue", "w3-blue-grey");
             }
             x[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " w3-blue";
+            dots[slideIndex - 1].classList.add("w3-blue");
         }
 
             /*function carousel() {
