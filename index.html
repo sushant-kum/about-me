@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sushant Kumar | About Me</title>
+    <link rel="icon" type="image/png" href="images/myicon1.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/font-Lato.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js" integrity="sha256-1hjUhpc44NwiNg8OwMu2QzJXhD8kcj+sJA3aCQZoUjg=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/disable-scroll.js"></script>
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="loader">
+        <div class="load-bar">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div id="bar1" class="down-bar"></div>
+        <img class="loading-gif" src="images/loading-min.gif" />
+        <input type="hidden" id="progress_width" value="0" />
+    </div>
+    <script type="text/javascript">
+        document.onreadystatechange = function (e) {
+            if (document.readyState == "interactive") {
+                var all = document.getElementsByTagName("*");
+                for (var i = 0, max = all.length; i < max; i++) {
+                    set_ele(all[i]);
+                }
+            }
+        }
+
+        function set_ele(set_element) {
+            check_element(set_element);
+        }
+
+        function check_element(ele) {
+            var all = document.getElementsByTagName("*");
+            var totalele = all.length;
+            var per_inc = 100 / all.length;
+
+            if ($(ele).on()) {
+                var prog_width = per_inc + Number(document.getElementById("progress_width").value);
+                document.getElementById("progress_width").value = prog_width;
+                $("#bar1").animate({ width: prog_width + "%" }, 10, function () {
+                    if (document.getElementById("bar1").style.width == "100%") {
+                        $("#bar1").css("background", "#2196F3");
+                        animate_bar();
+                    }
+                });
+            }
+            else {
+                set_ele(ele);
+            }
+        }
+
+        function animate_bar() {
+            var prog_bar = document.getElementById("bar1");
+        }
+    </script>
+    <!-- Navbar (sit on top) -->
+    <div id="navbar" class="w3-top">
+        <ul class="w3-navbar" id="myNavbar">
+            <!--
+            <li class="w3-left">
+                <a id="GoBack" href="#" class="w3-padding-large" onclick="window.history.back();">
+                    <i class="fa fa-chevron-circle-left "></i>&nbsp;
+                    <span style="font-size: 17px;">GO BACK</span>
+                </a>
+            </li>
+            -->
+            <li class="w3-hide-small w3-right">
+                <a id="CV" href="docs/CV Sushant Kumar.pdf" target="_blank" data-toggle="popover" data-trigger="hover" data-content="Click to View CV" onmouseover="hover();" onmouseout="unhover();">
+                    <img id="imgCV" width="35" height="35" style="margin: 2px 0px 1.5px 0px" src="images/cvblue.png" />
+                </a>
+            </li>
+            <li class="w3-hide-small w3-right">
+                <a class="w3-padding-large" href="#contact-parallax">
+                    <i class="fa fa-phone"></i>&nbsp;
+                    <span style="font-size: 17px;">Contact Me</span>
+                </a>
+            </li>
+            <li class="w3-hide-small w3-right">
+                <a class="w3-padding-large" href="#portfolio-parallax">
+                    <i class="fa fa-briefcase"></i>&nbsp;
+                    <span style="font-size: 17px;">My Work</span>
+                </a>
+            </li>
+            <li class="w3-hide-small w3-right">
+                <a class="w3-padding-large" href="#about">
+                    <i class="fa fa-user"></i>&nbsp;
+                    <span style="font-size: 17px;">About Me</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-opacity w3-grayscale-max w3-display-container">
+        <div class="w3-display-middle" style="white-space: nowrap;">
+            <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">SUSHANT&nbsp; KUMAR</span>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div id="about" class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">ABOUT ME</h3>
+        <p class="w3-center"><em>I love coding...</em></p>
+        <div class="w3-row">
+            <div class="w3-col m3 w3-center w3-section">
+                <img src="images/mypic.jpg" class="w3-circle" width="175" height="175" alt="Photo of Me">
+                <br />
+                <p><b>Sushant Kumar</b></p>
+            </div>
+
+            <div class="w3-col m9 w3-section">
+                <div style="text-align:justify;">
+                    <b>Name</b>: Sushant Kumar<br /><br />
+                    <b>Qualification</b>: B.E. (pursuing) in Computer Science and Engineering<br /><br />
+                    <b>Career Objectives</b>: To work in a conducive environment with plenty of opportunities and through which I can learn and enhance my skills and at the same time resulting in the growth of the organization. I would like to make optimum use of those opportunities, my academic skills and grow along with the company.<br /><br />
+                    <b>Skillsets and Interests</b>:
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;AngularJS</span>
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;Angular-Material</span>
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;Web Designing and Development</span>
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;HTML</span>
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;CSS</span>
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;JavaScript</span>
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;PHP</span>
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;ASP.Net C#</span>
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;Web Applications Development</span>
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;Software Development</span>
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;Microsoft SQL Sever</span>
+                    <span class="w3-tag w3-blue w3-small w3-round"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;Oracle Database</span><br /><br />
+                    <b>Industrial Exposure and Internships:</b><br />
+                    <div class="w3-row">
+                        <div class="w3-col s1">
+                            <span class="w3-tag w3-amber w3-left"><span class="w3-text-white">1</span></span><br />
+                            <span class="w3-tag w3-amber w3-left">&nbsp;</span><br />
+                            <span class="w3-tag w3-amber w3-lefft">&nbsp;</span><br />
+                            <span class="w3-tag w3-amber w3-left">&nbsp;</span><br />
+                            <span class="w3-hide-large w3-left"><span class="w3-tag w3-amber">&nbsp;</span><br /></span>
+                            <span class="w3-hide-large w3-left"><span class="w3-tag w3-amber">&nbsp;</span><br /></span>
+                        </div>
+                        <div class="w3-col s11">
+                            <p style="text-align:justify;">Website Development and Web Technologies from 5th January 2015 to 31st January 2015 at Information Technology & System Deptt., Industrial Systems Group, Bharat Heavy Electricals Ltd., Bangalore and successfully completed the project on website design and development.</p>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="w3-row">
+                        <div class="w3-col s11">
+                            <p style="text-align:justify;">ASP.NET and Oracle Database Web Based Applications from 6th July 2015 to 25th July 2015 at Information Technology & System Deptt., Industrial Systems Group, Bharat Heavy Electricals Ltd., Bangalore and successfully completed the project on web applications development and database management.</p>
+                        </div>
+                        <div class="w3-col s1">
+                            <span class="w3-tag w3-teal w3-right"><span class="w3-text-white">2</span></span><br />
+                            <span class="w3-tag w3-teal w3-right">&nbsp;</span><br />
+                            <span class="w3-tag w3-teal w3-right">&nbsp;</span><br />
+                            <span class="w3-tag w3-teal w3-right">&nbsp;</span><br />
+                            <span class="w3-hide-large w3-right"><span class="w3-tag w3-teal w3-center">&nbsp;</span><br /></span>
+                            <span class="w3-hide-large w3-right"><span class="w3-tag w3-teal w3-center">&nbsp;</span><br /></span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="w3-row">
+                        <div class="w3-col s1">
+                            <span class="w3-tag w3-cyan w3-left"><span class="w3-text-white">3</span></span><br />
+                            <span class="w3-tag w3-cyan w3-left">&nbsp;</span><br />
+                            <span class="w3-tag w3-cyan w3-left">&nbsp;</span><br />
+                            <span class="w3-tag w3-cyan w3-left">&nbsp;</span><br />
+                            <span class="w3-hide-large w3-left"><span class="w3-tag w3-cyan">&nbsp;</span><br /></span>
+                            <span class="w3-hide-large w3-left"><span class="w3-tag w3-cyan">&nbsp;</span><br /></span>
+                        </div>
+                        <div class="w3-col s11">
+                            <p style="text-align:justify;">Digital Marketing from 19th February 2016 to 30th April 2016 at Sir M. Visvesvaraya Institute of Technology, Bangalore organised by StudentPhase.</p>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="w3-row">
+                        <div class="w3-col s11">
+                            <p style="text-align:justify;">Cuurently interning at Plankton Solutions Pvt. Ltd. and working on Web Applications for telecom services provider Digicel using HTML, CSS, JavaScript and Go-Lang for server programming and Nginx for load balancing and as web server.</p>
+                        </div>
+                        <div class="w3-col s1">
+                            <span class="w3-tag w3-deep-orange w3-right"><span class="w3-text-white">4</span></span><br />
+                            <span class="w3-tag w3-deep-orange w3-right">&nbsp;</span><br />
+                            <span class="w3-tag w3-deep-orange w3-right">&nbsp;</span><br />
+                            <span class="w3-tag w3-deep-orange w3-right">&nbsp;</span><br />
+                            <span class="w3-hide-large w3-right"><span class="w3-tag w3-deep-orange w3-center">&nbsp;</span><br /></span>
+                            <span class="w3-hide-large w3-right"><span class="w3-tag w3-deep-orange w3-center">&nbsp;</span><br /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w3-dark-grey">
+        <div class="w3-content w3-container w3-text-white w3-padding-64">
+            <h3 class="w3-center">I'm good at...</h3>
+            <div class="w3-padding" style="padding-left: 0!important; padding-right: 0!important;">
+                <img src="images/angular-js.min.png" style="height: 25px;" />&nbsp;Angular JS <span class="w3-right w3-hide-large">Experienced <span id="angularJs1" class="experience"></span></span>
+            </div>
+            <div class="w3-row">
+                <div class="w3-col l8">
+                    <div class="w3-grey w3-round-xlarge">
+                        <div id="angularJs" class="w3-container w3-round-xlarge w3-white w3-text-grey star-rating">
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col l4 w3-hide-small w3-hide-medium" style="text-align: right;">
+                    Experienced <span id="angularJs2" class="experience"></span>
+                </div>
+            </div>
+
+            <div class="w3-padding" style="padding-left: 0!important; padding-right: 0!important;">
+                <img src="images/angular-material.min.png" style="height: 25px;" />&nbsp;Angular-Material <span class="w3-right w3-hide-large">Experienced <span id="angularMaterial1" class="experience"></span></span>
+            </div>
+            <div class="w3-row">
+                <div class="w3-col l8">
+                    <div class="w3-grey w3-round-xlarge">
+                        <div id="angularMaterial" class="w3-container w3-round-xlarge w3-white w3-text-grey star-rating"></div>
+                    </div>
+                </div>
+                <div class="w3-col l4 w3-hide-small w3-hide-medium" style="text-align: right;">
+                    Experienced <span id="angularMaterial2" class="experience"></span>
+                </div>
+            </div>
+
+            <div class="w3-padding" style="padding-left: 0!important; padding-right: 0!important;">
+                <img src="images/html5.min.png" style="height: 25px;" />&nbsp;HTML 5 <span class="w3-right w3-hide-large">Experienced <span id="html51" class="experience"></span></span>
+            </div>
+            <div class="w3-row">
+                <div class="w3-col l8">
+                    <div class="w3-grey w3-round-xlarge">
+                        <div id="html5" class="w3-container w3-round-xlarge w3-white w3-text-grey star-rating"></div>
+                    </div>
+                </div>
+                <div class="w3-col l4 w3-hide-small w3-hide-medium" style="text-align: right;">
+                    Experienced <span id="html52" class="experience"></span>
+                </div>
+            </div>
+
+            <div class="w3-padding" style="padding-left: 0!important; padding-right: 0!important;">
+                <img src="images/css3.min.png" style="height: 25px;" />&nbsp;CSS 3 <span class="w3-right w3-hide-large">Experienced <span id="css31" class="experience"></span></span>
+            </div>
+            <div class="w3-row">
+                <div class="w3-col l8">
+                    <div class="w3-grey w3-round-xlarge">
+                        <div id="css3" class="w3-container w3-round-xlarge w3-white w3-text-grey star-rating"></div>
+                    </div>
+                </div>
+                <div class="w3-col l4 w3-hide-small w3-hide-medium" style="text-align: right;">
+                    Experienced <span id="css32" class="experience"></span>
+                </div>
+            </div>
+
+            <div class="w3-padding" style="padding-left: 0!important; padding-right: 0!important;">
+                <img src="images/javascript.min.png" style="height: 25px;" />&nbsp;Javascript <span class="w3-right w3-hide-large">Experienced <span id="javascript1" class="experience"></span></span>
+            </div>
+            <div class="w3-row">
+                <div class="w3-col l8">
+                    <div class="w3-grey w3-round-xlarge">
+                        <div id="javascript" class="w3-container w3-round-xlarge w3-white w3-text-grey star-rating"></div>
+                    </div>
+                </div>
+                <div class="w3-col l4 w3-hide-small w3-hide-medium" style="text-align: right;">
+                    Experienced <span id="javascript2" class="experience"></span>
+                </div>
+            </div>
+
+            <div class="w3-padding" style="padding-left: 0!important; padding-right: 0!important;">
+                <img src="images/php.min.png" style="height: 25px;" />&nbsp;PHP <span class="w3-right w3-hide-large">Experienced <span id="php1" class="experience"></span></span>
+            </div>
+            <div class="w3-row">
+                <div class="w3-col l8">
+                    <div class="w3-grey w3-round-xlarge">
+                        <div id="php" class="w3-container w3-round-xlarge w3-white w3-text-grey star-rating"></div>
+                    </div>
+                </div>
+                <div class="w3-col l4 w3-hide-small w3-hide-medium" style="text-align: right;">
+                    Experienced <span id="php2" class="experience"></span>
+                </div>
+            </div>
+
+            <div class="w3-padding" style="padding-left: 0!important; padding-right: 0!important;">
+                <img src="images/asp.min.png" style="height: 25px;" />&nbsp;ASP.Net C# <span class="w3-right w3-hide-large">Experienced <span id="asp1" class="experience"></span></span>
+            </div>
+            <div class="w3-row">
+                <div class="w3-col l8">
+                    <div class="w3-grey w3-round-xlarge">
+                        <div id="asp" class="w3-container w3-round-xlarge w3-white w3-text-grey star-rating"></div>
+                    </div>
+                </div>
+                <div class="w3-col l4 w3-hide-small w3-hide-medium" style="text-align: right;">
+                    Experienced <span id="asp2" class="experience"></span>
+                </div>
+            </div>
+
+            <div class="w3-padding" style="padding-left: 0!important; padding-right: 0!important;">
+                <img src="images/oracle.min.png" style="height: 25px;" />&nbsp;Oracle Database <span class="w3-right w3-hide-large">Experienced <span id="oracleDatabase1" class="experience"></span></span>
+            </div>
+            <div class="w3-row">
+                <div class="w3-col l8">
+                    <div class="w3-grey w3-round-xlarge">
+                        <div id="oracleDatabase" class="w3-container w3-round-xlarge w3-white w3-text-grey star-rating"></div>
+                    </div>
+                </div>
+                <div class="w3-col l4 w3-hide-small w3-hide-medium" style="text-align: right;">
+                    Experienced <span id="oracleDatabase2" class="experience"></span>
+                </div>
+            </div>
+
+            <div class="w3-padding" style="padding-left: 0!important; padding-right: 0!important;">
+                <img src="images/sqlServer.min.png" style="height: 25px;" />&nbsp;MS SQL Server <span class="w3-right w3-hide-large">Experienced <span id="sqlServer1" class="experience"></span></span>
+            </div>
+            <div class="w3-row">
+                <div class="w3-col l8">
+                    <div class="w3-grey w3-round-xlarge">
+                        <div id="sqlServer" class="w3-container w3-round-xlarge w3-white w3-text-grey star-rating"></div>
+                    </div>
+                </div>
+                <div class="w3-col l4 w3-hide-small w3-hide-medium" style="text-align: right;">
+                    Experienced <span id="sqlServer2" class="experience"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var rating = {};
+        rating.total = 10;
+        rating.angularJs = 5;
+        rating.angularMaterial = 5;
+        rating.html5 = 8;
+        rating.css3 = 8;
+        rating.javascript = 7;
+        rating.php = 6;
+        rating.asp = 6;
+        rating.oracleDatabase = 6;
+        rating.sqlServer = 6;
+        var eles = document.getElementsByClassName("star-rating");
+        for (var i = 0; i < eles.length; i++) {
+            var currRating = rating[eles[i].id];
+            eles[i].style.width = (currRating / rating.total * 100) + "%";
+            var str = ""
+            str = '<div class="w3-hide-small w3-hide-medium">';
+            for (var j = 1; j <= rating.total; j++) {
+                if (j <= currRating)
+                    str += '<i class="fa fa-star"></i>';
+                else
+                    str += '<i class="fa fa-star-o"></i>';
+            }
+            str += '</div>';
+            str += '<div class="w3-hide-large">' + currRating + '/' + rating.total + '</div>';
+            eles[i].innerHTML = str;
+        }
+        var start = {};
+        start.angularJs = new Date("January 31, 2017");
+        start.angularMaterial = new Date("Januyary 31, 2017");
+        start.html5 = new Date("June 30, 2014");
+        start.css3 = new Date("June 30, 2014");
+        start.javascript = new Date("June 30, 2014");
+        start.php = new Date("July 31, 2016");
+        start.asp = new Date("Januyary 31, 2015");
+        start.oracleDatabase = new Date("Januyary 31, 2015");
+        start.sqlServer = new Date("Januyary 31, 2015");
+        var eles = document.getElementsByClassName("experience");
+        for (var i = 0; i < eles.length; i += 2) {
+            var ele1 = eles[i], ele2 = eles[i + 1];
+            var diffDate = new Date(new Date() - start[(ele1.id).substr(0, (ele1.id).length - 1)]);
+            console.log(diffDate.toISOString());
+            var years = diffDate.getFullYear() - 1970;
+            var months = diffDate.getMonth() + 1;
+            var days = diffDate.getDate();
+            if (days >= 15)
+                months++;
+            ele1.innerHTML = "";
+            if (years != 0)
+                ele1.innerHTML += years + " year(s) ";
+            if (months != 0)
+                ele1.innerHTML += months + " month(s)";
+            ele2.innerHTML = ele1.innerHTML;
+        }
+    </script>
+
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div id="portfolio-parallax" class="bgimg-2 w3-opacity w3-display-container">
+        <div class="w3-display-middle" style="white-space: nowrap;">
+            <span class="w3-center w3-padding-xlarge w3-teal w3-xlarge w3-wide">PORTFOLIO</span>
+        </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div id="portfolio" class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">MY WORK</h3>
+        <p class="w3-center">
+            <em>Here are some of my latest projects.</em>
+        </p>
+        <br>
+
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <div>
+            <div class="w3-row-padding w3-center">
+                <div class="w3-col m4">
+
+                    <div class="w3-card-4">
+                        <header class="w3-container w3-blue w3-hide-small">
+                            <h3>Application Portal</h3>
+                        </header>
+
+                        <br class="w3-hide-medium w3-hide-large" />
+                        <p></p>
+                        <div class="w3-container">
+                            <img src="images/Capture1.jpg" style="width: 100%">
+                        </div>
+                        <p></p>
+
+                        <h3 class="w3-center w3-hide-large w3-hide-medium w3-text-blue">Application Portal</h3>
+                        <div class="w3-container w3-hide-small">
+                            <p class="proj-desc">Web Application Portal for use by Colleges and Educational Institutes using <b>ASP.NET</b> and <b>SQL Server Database</b>.</p>
+                        </div>
+                        <div class="w3-container w3-hide-medium w3-hide-large">
+                            <p>Click below to know more.</p>
+                        </div>
+
+                        <button class="w3-btn-block w3-blue w3-hover-blue-grey w3-ripple" onclick="document.getElementById('modal-applicaion-portal').style.display='block'; disableScroll.on();" style="cursor: pointer">Know More</button>
+
+                    </div>
+                    <br />
+                    <div class="w3-card-4">
+                        <header class="w3-container w3-blue w3-hide-small">
+                            <h3>Application Portal for BHEL-ISG Intranet</h3>
+                        </header>
+
+                        <br class="w3-hide-medium w3-hide-large" />
+                        <p></p>
+                        <div class="w3-container">
+                            <img src="images/noimg.jpg" style="width: 100%">
+                        </div>
+                        <p></p>
+
+                        <h3 class="w3-center w3-hide-large w3-hide-medium w3-text-blue">Application Portal for BHEL-ISG Intranet</h3>
+                        <div class="w3-container w3-hide-small">
+                            <p class="proj-desc">Worked on the Web Applications for Bharat Heavy Electricals Limited-Industrial Systems Group, Bangalore using <b>ASP.NET</b> and <b>Oracle Database</b>. The developed applications were released soon after and are being used currently on the company intranet.</p>
+                        </div>
+                        <div class="w3-container w3-hide-medium w3-hide-large">
+                            <p>Click below to know more.</p>
+                        </div>
+
+                        <button class="w3-btn-block w3-blue w3-hover-blue-grey w3-ripple" onclick="document.getElementById('modal-BHEL-portal').style.display='block'; disableScroll.on();" style="cursor: pointer">Know More</button>
+
+                    </div>
+                    <br />
+                </div>
+
+                <div class="w3-col m4">
+                    <div class="w3-card-4">
+
+                        <header class="w3-container w3-blue w3-hide-small">
+                            <h3>Technology Blog</h3>
+                        </header>
+
+                        <br class="w3-hide-medium w3-hide-large" />
+                        <p></p>
+                        <div class="w3-container">
+                            <img src="images/Capture2.jpg" style="width: 100%">
+                        </div>
+                        <p></p>
+
+                        <h3 class="w3-center w3-hide-large w3-hide-medium w3-text-blue">Technology Blog</h3>
+                        <div class="w3-container w3-hide-small">
+                            <p class="proj-desc"><b>TechWired</b> is a blog and article site dedicated to everything even remotely connected to technology which keeps you wired to the cool stuff happening throughout the science world. Feed the geek inside you with the latest going on in and around the technology world.</p>
+                        </div>
+                        <div class="w3-container w3-hide-medium w3-hide-large">
+                            <p>Click below to know more.</p>
+                        </div>
+
+                        <button class="w3-btn-block w3-blue w3-hover-blue-grey w3-ripple" onclick="document.getElementById('modal-techwired').style.display='block'; disableScroll.on();" style="cursor: pointer">Know More</button>
+
+                    </div>
+                    <br />
+                    <div class="w3-card-4">
+                        <header class="w3-container w3-blue w3-hide-small">
+                            <h3>Website for BHEL-ISG</h3>
+                        </header>
+
+                        <br class="w3-hide-medium w3-hide-large" />
+                        <p></p>
+                        <div class="w3-container">
+                            <img src="images/Capture4.jpg" style="width: 100%">
+                        </div>
+                        <p></p>
+
+                        <h3 class="w3-center w3-hide-large w3-hide-medium w3-text-blue">Website for BHEL-ISG</h3>
+                        <div class="w3-container w3-hide-small">
+                            <p class="proj-desc">Redesigned the website for <b>Bharat Heavy Electricals Limited-Industrial Systems Group, Bangalore</b>. The Redesigned website came into effect shortly after and is being used currently with slight theme changes.</p>
+                        </div>
+                        <div class="w3-container w3-hide-medium w3-hide-large">
+                            <p>Click below to know more.</p>
+                        </div>
+
+                        <button class="w3-btn-block w3-blue w3-hover-blue-grey w3-ripple" onclick="document.getElementById('modal-BHEL-site').style.display='block'; disableScroll.on();" style="cursor: pointer">Know More</button>
+
+                    </div>
+                    <br />
+                </div>
+
+                <div class="w3-col m4">
+
+                    <div class="w3-card-4">
+                        <header class="w3-container w3-blue w3-hide-small">
+                            <h3>Pure HTML & CSS Loaders</h3>
+                        </header>
+
+                        <br class="w3-hide-medium w3-hide-large" />
+                        <p></p>
+                        <div class="w3-container">
+                            <img src="images/Capture3.jpg" style="width: 100%">
+                        </div>
+                        <p></p>
+
+                        <h3 class="w3-center w3-hide-large w3-hide-medium w3-text-blue">Pure HTML & CSS Loaders</h3>
+                        <div class="w3-container w3-hide-small">
+                            <p class="proj-desc">A collection of loaders made purely with <b>HTML</b> and <b>CSS</b> only.</p>
+                        </div>
+                        <div class="w3-container w3-hide-medium w3-hide-large">
+                            <p>Click below to know more.</p>
+                        </div>
+
+                        <button class="w3-btn-block w3-blue w3-hover-blue-grey w3-ripple" onclick="document.getElementById('modal-loaders').style.display='block'; disableScroll.on();" style="cursor: pointer">Know More</button>
+                    </div>
+                    <br />
+                    <div class="w3-card-4">
+                        <header class="w3-container w3-blue w3-hide-small">
+                            <h3>Website Design for Kalanjali 2015</h3>
+                        </header>
+
+                        <br class="w3-hide-medium w3-hide-large" />
+                        <p></p>
+                        <div class="w3-container">
+                            <img src="images/noimg.jpg" style="width: 100%">
+                        </div>
+                        <p></p>
+
+                        <h3 class="w3-center w3-hide-large w3-hide-medium w3-text-blue">Website Design for Kalanjali 2015</h3>
+                        <div class="w3-container w3-hide-small">
+                            <p class="proj-desc">Was a member and lead front-end designer of the website design and development team for <b>Kalanjali 2015</b>, Inter-collegiate techno-cultural fest of Sir M. Visvesvaraya Institute of Technology.</p>
+                        </div>
+                        <div class="w3-container w3-hide-medium w3-hide-large">
+                            <p>Click below to know more.</p>
+                        </div>
+
+                        <button class="w3-btn-block w3-blue w3-hover-blue-grey w3-ripple" onclick="document.getElementById('modal-kalanjali').style.display='block'; disableScroll.on();" style="cursor: pointer">Know More</button>
+                    </div>
+                    <br />
+                </div>
+            </div>
+
+            <div id="application-modals">
+                <div id="modal-applicaion-portal" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                        <header class="w3-container w3-blue">
+                            <span onclick="document.getElementById('modal-applicaion-portal').style.display='none'; disableScroll.off();" class="w3-closebtn w3-padding-top">&times;</span>
+                            <h2>Application Portal</h2>
+                        </header>
+                        <div class="w3-row w3-section">
+                            <div class="w3-col m6 w3-container w3-hide-small">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Screenshots</h4>
+                                    <div class="clr"></div>
+                                    <div class="w3-content w3-display-container" style="max-width: 800px">
+                                        <img class="mySlides1" src="images/screenshots/capture11.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-11').style.display='block'">
+                                        <img class="mySlides1" src="images/screenshots/capture12.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-12').style.display='block'">
+                                        <img class="mySlides1" src="images/screenshots/capture13.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-13').style.display='block'">
+                                        <img class="mySlides1" src="images/screenshots/capture14.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-14').style.display='block'">
+                                        <img class="mySlides1" src="images/screenshots/capture15.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-15').style.display='block'">
+                                        <div class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft" style="width: 100%">
+                                            <div class="w3-left w3-padding-left w3-hover-text-blue-grey w3-text-blue" onclick="plusDivs(-1,'1')"><i class="fa fa-arrow-circle-left"></i></div>
+                                            <div class="w3-right w3-padding-right w3-hover-text-blue-grey w3-text-blue" onclick="plusDivs(1,'1')"><i class="fa fa-arrow-circle-right"></i></div>
+                                            <span class="w3-badge demo1 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(1,'1')"></span>
+                                            <span class="w3-badge demo1 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(2,'1')"></span>
+                                            <span class="w3-badge demo1 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(3,'1')"></span>
+                                            <span class="w3-badge demo1 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(4,'1')"></span>
+                                            <span class="w3-badge demo1 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(5,'1')"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 w3-container">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Project Description</h4>
+                                    <p class="proj-desc">
+                                        Currently working as the lead programmer for the development of Web Application Portal for use by Colleges and Educational Institutes using <b>ASP.NET</b> and <b>SQL Server Database</b>.
+                                    </p>
+                                    <hr style="border-color: #2196F3;" />
+                                    <h4 class="w3-center w3-text-blue">Project Link</h4>
+                                    <a class="w3-btn-block w3-text-blue w3-hover-blue w3-white w3-border w3-border-blue" target="_blank" href="http://sksite001.somee.com">Go To Project</a>
+                                    <p class="w3-tiny w3-text-grey"><em><b>Note</b>: Enter "sunny" (without qoutes) as User ID and Password to Login into the Portal.</em></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-container w3-blue w3-padding">
+                            <button class="w3-btn w3-right w3-white w3-border" onclick="document.getElementById('modal-applicaion-portal').style.display='none'; disableScroll.off();">Close</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal-img-11" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-11').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture11.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">Login Page</div>
+                    </div>
+                </div>
+                <div id="modal-img-12" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-12').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture12.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">Application Homepage</div>
+                    </div>
+                </div>
+                <div id="modal-img-13" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-13').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture13.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">Page to Create New Application User</div>
+                    </div>
+                </div>
+                <div id="modal-img-14" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-14').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture14.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">Employee Data Entry Page</div>
+                    </div>
+                </div>
+                <div id="modal-img-15" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-15').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture15.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">Department Data Entry Page</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="techwired-modals">
+                <div id="modal-techwired" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                        <header class="w3-container w3-blue">
+                            <span onclick="document.getElementById('modal-techwired').style.display='none'; disableScroll.off();" class="w3-closebtn w3-padding-top">&times;</span>
+                            <h2>Technology Blog</h2>
+                        </header>
+                        <div class="w3-row w3-section">
+                            <div class="w3-col m6 w3-container w3-hide-small">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Screenshots</h4>
+                                    <div class="clr"></div>
+                                    <div class="w3-content w3-display-container" style="max-width: 800px">
+                                        <img class="mySlides2" src="images/screenshots/capture21.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-21').style.display='block'">
+                                        <img class="mySlides2" src="images/screenshots/capture22.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-22').style.display='block'">
+                                        <img class="mySlides2" src="images/screenshots/capture23.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-23').style.display='block'">
+                                        <img class="mySlides2" src="images/screenshots/capture24.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-24').style.display='block'">
+                                        <img class="mySlides2" src="images/screenshots/capture25.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-25').style.display='block'">
+                                        <div class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft" style="width: 100%">
+                                            <div class="w3-left w3-padding-left w3-hover-text-blue-grey w3-text-blue" onclick="plusDivs(-1,'2')"><i class="fa fa-arrow-circle-left"></i></div>
+                                            <div class="w3-right w3-padding-right w3-hover-text-blue-grey w3-text-blue" onclick="plusDivs(1,'2')"><i class="fa fa-arrow-circle-right"></i></div>
+                                            <span class="w3-badge demo2 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(1,'2')"></span>
+                                            <span class="w3-badge demo2 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(2,'2')"></span>
+                                            <span class="w3-badge demo2 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(3,'2')"></span>
+                                            <span class="w3-badge demo2 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(4,'2')"></span>
+                                            <span class="w3-badge demo2 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(5,'2')"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 w3-container">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Project Description</h4>
+                                    <p class="proj-desc">
+                                        <b>TechWired</b> is a blog and article site dedicated to everything even remotely connected to technology which keeps you wired to the cool stuff happening throughout the science world. Feed the geek inside you with the latest going on in and around the technology world.
+                                    </p>
+                                    <hr style="border-color: #2196F3;" />
+                                    <h4 class="w3-center w3-text-blue">Project Link</h4>
+                                    <a class="w3-btn-block w3-text-blue w3-hover-blue w3-white w3-border w3-border-blue" target="_blank" href="http://techwired.in">Go To Project</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-container w3-blue w3-padding">
+                            <button class="w3-btn w3-right w3-white w3-border" onclick="document.getElementById('modal-techwired').style.display='none'; disableScroll.off();">Close</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal-img-21" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-21').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture21.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">TechWired Homeage</div>
+                    </div>
+                </div>
+                <div id="modal-img-22" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-22').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture22.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">TechWired - Sections</div>
+                    </div>
+                </div>
+                <div id="modal-img-23" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-23').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture23.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">TechWired - "Computer and Gizmos" Page</div>
+                    </div>
+                </div>
+                <div id="modal-img-24" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-24').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture24.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">TechWired - "Wheels and Automobiles" Page</div>
+                    </div>
+                </div>
+                <div id="modal-img-25" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-25').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture25.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">TechWired - "Science and Research" Page</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loaders-modals">
+                <div id="modal-loaders" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                        <header class="w3-container w3-blue">
+                            <span onclick="document.getElementById('modal-loaders').style.display='none'; disableScroll.off();" class="w3-closebtn w3-padding-top">&times;</span>
+                            <h2>Pure HTML & CSS Loaders</h2>
+
+                        </header>
+                        <div class="w3-row w3-section">
+                            <div class="w3-col m6 w3-container w3-hide-small">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Screenshots</h4>
+                                    <div class="clr"></div>
+                                    <div class="w3-content w3-display-container" style="max-width: 800px">
+                                        <img class="mySlides3" src="images/screenshots/capture31.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-31').style.display='block'">
+                                        <img class="mySlides3" src="images/screenshots/capture32.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-32').style.display='block'">
+                                        <img class="mySlides3" src="images/screenshots/capture33.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-33').style.display='block'">
+                                        <img class="mySlides3" src="images/screenshots/capture34.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-34').style.display='block'">
+                                        <img class="mySlides3" src="images/screenshots/capture35.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-35').style.display='block'">
+                                        <img class="mySlides3" src="images/screenshots/capture36.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-36').style.display='block'">
+                                        <img class="mySlides3" src="images/screenshots/capture37.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-37').style.display='block'">
+                                        <div class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft" style="width: 100%">
+                                            <div class="w3-left w3-padding-left w3-hover-text-blue-grey w3-text-blue" onclick="plusDivs(-1,'3')"><i class="fa fa-arrow-circle-left"></i></div>
+                                            <div class="w3-right w3-padding-right w3-hover-text-blue-grey w3-text-blue" onclick="plusDivs(1,'3')"><i class="fa fa-arrow-circle-right"></i></div>
+                                            <span class="w3-badge demo3 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(1,'3')"></span>
+                                            <span class="w3-badge demo3 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(2,'3')"></span>
+                                            <span class="w3-badge demo3 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(3,'3')"></span>
+                                            <span class="w3-badge demo3 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(4,'3')"></span>
+                                            <span class="w3-badge demo3 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(5,'3')"></span>
+                                            <span class="w3-badge demo3 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(6,'3')"></span>
+                                            <span class="w3-badge demo3 w3-border w3-blue-grey w3-opacity w3-hover-blue" onclick="currentDiv(7,'3')"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 w3-container">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Project Description</h4>
+                                    <p class="proj-desc">
+                                        A collection of loaders made purely with <b>HTML</b> and <b>CSS</b> only.
+                                    </p>
+                                    <hr style="border-color: #2196F3;" />
+                                    <h4 class="w3-center w3-text-blue">Project Link</h4>
+                                    <a class="w3-btn-block w3-text-blue w3-hover-blue w3-white w3-border w3-border-blue" target="_blank" href="https://rawgit.com/Sushant-Kum/Loaders/master/index.html">Go To Project</a>
+                                    <br />
+                                    <br />
+                                    <a class="w3-btn-block w3-text-teal w3-hover-teal w3-white w3-border w3-border-teal" target="_blank" href="https://github.com/Sushant-Kum/Loaders">Go To Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-container w3-blue w3-padding">
+                            <button class="w3-btn w3-right w3-white w3-border" onclick="document.getElementById('modal-loaders').style.display='none'; disableScroll.off();">Close</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal-img-31" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-31').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture31.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">Loaders - Types</div>
+                    </div>
+                </div>
+                <div id="modal-img-32" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-32').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture32.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">Spinner Loaders</div>
+
+                    </div>
+                </div>
+                <div id="modal-img-33" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-33').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture33.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">Horizontal Loaders</div>
+                    </div>
+                </div>
+                <div id="modal-img-34" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-34').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture34.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">3D Loaders</div>
+                    </div>
+                </div>
+                <div id="modal-img-35" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-35').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture35.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">Miscellaneous Loaders</div>
+                    </div>
+                </div>
+                <div id="modal-img-36" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-36').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture36.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">Loader Animation Showcase Section</div>
+                    </div>
+                </div>
+                <div id="modal-img-37" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-37').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture37.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">Loader Code Showcase Section</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="BHEL-portal-modals">
+                <div id="modal-BHEL-portal" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                        <header class="w3-container w3-blue">
+                            <span onclick="document.getElementById('modal-BHEL-portal').style.display='none'; disableScroll.off();" class="w3-closebtn w3-padding-top">&times;</span>
+                            <h2>Application Portal for BHEL-ISG Intranet</h2>
+                        </header>
+                        <div class="w3-row w3-section">
+                            <div class="w3-col m6 w3-container w3-hide-small">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Screenshots</h4>
+                                    <div class="clr"></div>
+                                    <div class="w3-content w3-display-container" style="max-width: 800px">
+                                        <img src="images/screenshots/no_ss_2.png" style="width: 200px; height: 200px; position: relative; left: calc(50% - 100px);">
+                                        <p class="w3-center w3-text-blue-grey" style="margin-top:10px;">No Image</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 w3-container">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Project Description</h4>
+                                    <p class="proj-desc">
+                                        Worked on the Web Applications for Bharat Heavy Electricals Limited-Industrial Systems Group, Bangalore using <b>ASP.NET</b> and <b>Oracle Database</b>. The developed applications were released soon after and are being used currently on the company intranet.
+                                    </p>
+                                    <hr style="border-color: #2196F3;" />
+                                    <h4 class="w3-center w3-text-blue">Project Link</h4>
+                                    <a class="w3-btn-block w3-text-blue w3-hover-blue w3-white w3-border w3-border-blue w3-disabled" href="#">Go To Project</a>
+                                    <p class="w3-tiny w3-text-grey"><em><b>Note</b>: No project link available.</em></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-container w3-blue w3-padding">
+                            <button class="w3-btn w3-right w3-white w3-border" onclick="document.getElementById('modal-BHEL-portal').style.display='none'; disableScroll.off();">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="BHEL-site-modals">
+                <div id="modal-BHEL-site" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                        <header class="w3-container w3-blue">
+                            <span onclick="document.getElementById('modal-BHEL-site').style.display='none'; disableScroll.off();" class="w3-closebtn w3-padding-top">&times;</span>
+                            <h2>Website for BHEL-ISG</h2>
+                        </header>
+                        <div class="w3-row w3-section">
+                            <div class="w3-col m6 w3-container w3-hide-small">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Screenshots</h4>
+                                    <div class="clr"></div>
+                                    <div class="w3-content w3-display-container" style="max-width: 800px">
+                                        <img class="mySlides5" src="images/screenshots/capture51.jpg" style="width: 100%;" onclick="document.getElementById('modal-img-51').style.display='block'">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 w3-container">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Project Description</h4>
+                                    <p class="proj-desc">
+                                        Redesigned the website for <b>Bharat Heavy Electricals Limited-Industrial Systems Group, Bangalore</b>. The Redesigned website came into effect shortly after and is being used currently with slight theme changes.
+                                    </p>
+                                    <hr style="border-color: #2196F3;" />
+                                    <h4 class="w3-center w3-text-blue">Project Link</h4>
+                                    <a class="w3-btn-block w3-text-blue w3-hover-blue w3-white w3-border w3-border-blue w3-disabled">Go To Project</a>
+                                    <p class="w3-tiny w3-text-grey"><em><b>Note</b>: No project link available.</em></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-container w3-blue w3-padding">
+                            <button class="w3-btn w3-right w3-white w3-border" onclick="document.getElementById('modal-BHEL-site').style.display='none'; disableScroll.off();">Close</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal-img-51" class="w3-modal">
+                    <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-text-white w3-hover-text-black" onclick="document.getElementById('modal-img-51').style.display='none'">&times;</span>
+                    <div class="w3-transparent w3-modal-content w3-animate-zoom">
+                        <img src="images/screenshots/capture51.jpg" style="width: 100%">
+                        <div class="w3-transparent w3-padding-16"></div>
+                        <div class="w3-center w3-text-white w3-blue w3-padding-8">BHEL-ISG, Bangalore Website Homepage</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="kalanjali-modals">
+                <div id="modal-kalanjali" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                        <header class="w3-container w3-blue">
+                            <span onclick="document.getElementById('modal-kalanjali').style.display='none'; disableScroll.off();" class="w3-closebtn w3-padding-top">&times;</span>
+                            <h2>Website Design for Kalanjali 2015</h2>
+                        </header>
+                        <div class="w3-row w3-section">
+                            <div class="w3-col m6 w3-container w3-hide-small">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Screenshots</h4>
+                                    <div class="clr"></div>
+                                    <div class="w3-content w3-display-container" style="max-width: 800px">
+                                        <img src="images/screenshots/no_ss_2.png" style="width: 200px; height: 200px; position: relative; left: calc(50% - 100px);">
+                                        <p class="w3-center w3-text-blue-grey w3-small" style="margin-top:10px;"><em>No Image Available</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 w3-container">
+                                <div style="padding: 0 50px; font-size: 14px;">
+                                    <h4 class="w3-center w3-text-blue">Project Description</h4>
+                                    <p class="proj-desc">
+                                        Was a member and lead front-end designer of the website design and development team for <b>Kalanjali 2015</b>, Inter-collegiate techno-cultural fest of Sir M. Visvesvaraya Institute of Technology.
+                                    </p>
+                                    <hr style="border-color: #2196F3;" />
+                                    <h4 class="w3-center w3-text-blue">Project Link</h4>
+                                    <a class="w3-btn-block w3-text-blue w3-hover-blue w3-white w3-border w3-border-blue w3-disabled" href="#">Go To Project</a>
+                                    <p class="w3-tiny w3-text-grey"><em><b>Note</b>: No project link available.</em></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-container w3-blue w3-padding">
+                            <button class="w3-btn w3-right w3-white w3-border" onclick="document.getElementById('modal-kalanjali').style.display='none'; disableScroll.off();">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Parallax Image with Contact Text -->
+    <div id="contact-parallax" class="bgimg-3 w3-display-container">
+        <div class="w3-display-middle">
+            <span class="w3-center w3-padding-xlarge w3-deep-orange w3-xlarge w3-wide">CONTACT</span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">GET IN TOUCH</h3>
+        <p class="w3-center"><em>I'd love to get in touch with you!</em></p>
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m5 w3-container">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker w3-hover-text-blue" style="width: 30px"></i>Bangalore, India<br>
+                    <i class="fa fa-phone w3-hover-text-blue" style="width: 30px"></i>&nbsp;<a href="tel:+919740895495" title="Click to call me">+91 97408 95495</a><br>
+                    <i class="fa fa-envelope w3-hover-text-blue" style="width: 30px"></i>&nbsp;<a href="mailto:sushant.kum96@gmail.com" title="Click to mail me">sushant.kum96@gmail.com</a><br>
+                </div>
+                <hr style="border-color: darkgrey;" />
+                <h4 class="w3-center">Know More About Me</h4>
+                <div class="down-button">
+                    <a class="down-link" href="docs/CV Sushant Kumar.pdf" target="_blank">
+                        <img width="30" height="30" style="margin: 0;" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgMTgxLjE2NyAxODEuMTY3IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxODEuMTY3IDE4MS4xNjc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMTQ4LjU1NiwwSDMyLjYxM2MtOS45OTQsMC0xOC4xMjEsOC4xMjYtMTguMTIxLDE4LjExNXYxNDQuOTRjMCw5Ljk4Niw4LjEyNiwxOC4xMTEsMTguMTIxLDE4LjExMWgxMTUuOTQzICAgIGM5Ljk5MiwwLDE4LjExOC04LjEyNSwxOC4xMTgtMTguMTExVjE4LjEyMUMxNjYuNjc5LDguMTMxLDE1OC41NTQsMCwxNDguNTU2LDB6IE0xNTkuNDMxLDE2My4wNTUgICAgYzAsNS45OTYtNC44NzgsMTAuODcxLTEwLjg3NSwxMC44NzFIMzIuNjEzYy01Ljk5NSwwLTEwLjg3LTQuODc1LTEwLjg3LTEwLjg3MVYxOC4xMjFjMC01Ljk5NSw0Ljg3NS0xMC44NywxMC44Ny0xMC44N2gxMTUuOTQzICAgIGM1Ljk5MiwwLDEwLjg2Nyw0Ljg3NSwxMC44NjcsMTAuODd2MTQ0LjkzNUgxNTkuNDMxeiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxwYXRoIGQ9Ik0xMjguNzkyLDc5LjIxMkg1Mi4zODRjLTEuODM5LDAtMy4zMjQsMS40OTEtMy4zMjQsMy4zM2MwLDEuODM4LDEuNDg1LDMuMzMsMy4zMjQsMy4zM2g3Ni40MDcgICAgYzEuODQxLDAsMy4zMjYtMS40OTEsMy4zMjYtMy4zM0MxMzIuMTE4LDgwLjcwNCwxMzAuNjMyLDc5LjIxMiwxMjguNzkyLDc5LjIxMnoiIGZpbGw9IiNGRkZGRkYiLz4KCQk8cGF0aCBkPSJNMTI4Ljc5Miw5NC4zODZINTIuMzg0Yy0xLjgzOSwwLTMuMzI0LDEuNDk0LTMuMzI0LDMuMzMzczEuNDg1LDMuMzI2LDMuMzI0LDMuMzI2aDc2LjQwNyAgICBjMS44NDEsMCwzLjMyNi0xLjQ4NywzLjMyNi0zLjMyNkMxMzIuMTEzLDk1Ljg3LDEzMC42MzIsOTQuMzg2LDEyOC43OTIsOTQuMzg2eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxwYXRoIGQ9Ik0xMjguNzkyLDEwOS41NTVINTIuMzg0Yy0xLjgzOSwwLTMuMzI0LDEuNDk0LTMuMzI0LDMuMzMxYzAsMS44MzksMS40ODUsMy4zMjgsMy4zMjQsMy4zMjhoNzYuNDA3ICAgIGMxLjg0MSwwLDMuMzI2LTEuNDg5LDMuMzI2LTMuMzI4QzEzMi4xMTgsMTExLjA0OSwxMzAuNjMyLDEwOS41NTUsMTI4Ljc5MiwxMDkuNTU1eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxwYXRoIGQ9Ik0xMjguNzkyLDEyNC43MjhIOTAuNTg1Yy0xLjgzNiwwLTMuMzI4LDEuNDg4LTMuMzI4LDMuMzI3czEuNDkyLDMuMzMzLDMuMzI4LDMuMzMzaDM4LjIwNiAgICBjMS44NDEsMCwzLjMyMS0xLjQ5NCwzLjMyMS0zLjMzM1MxMzAuNjMyLDEyNC43MjgsMTI4Ljc5MiwxMjQuNzI4eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxwYXRoIGQ9Ik0xMjguNzkyLDE1NC42OTNoLTI2Ljc0N2MtMS44NDUsMC0zLjMyNiwxLjQ4OS0zLjMyNiwzLjMyOGMwLDEuODM3LDEuNDgxLDMuMzI2LDMuMzI2LDMuMzI2aDI2Ljc0NyAgICBjMS44NDEsMCwzLjMyMS0xLjQ4OSwzLjMyMS0zLjMyNkMxMzIuMTEzLDE1Ni4xODIsMTMwLjYzMiwxNTQuNjkzLDEyOC43OTIsMTU0LjY5M3oiIGZpbGw9IiNGRkZGRkYiLz4KCQk8cGF0aCBkPSJNOTQuMjk2LDY0LjU4M2MwLTYuMjk4LTcuMjUxLTE0Ljc5My0xNy4wMzktMTcuMjc1YzQuMDg5LTIuNzUsNi45MDctOC4xODEsNi45MDctMTMuMDcyICAgIGMwLTYuODk4LTUuNTg2LTEyLjQ5Ni0xMi40OS0xMi40OTZjLTYuODk2LDAtMTIuNDksNS41OTgtMTIuNDksMTIuNDk2YzAsNC44ODYsMi44MTgsMTAuMzE3LDYuODk4LDEzLjA3MiAgICBjLTkuNzc0LDIuNDgxLTE3LjAzLDEwLjk4Mi0xNy4wMywxNy4yNzVDNDkuMDYsNzIuMDI1LDk0LjI5Niw3Mi4wMjUsOTQuMjk2LDY0LjU4M3ogTTcwLjY2Nyw1MC45MzNINzAuNjFsLTIuMDY4LTIuMzc1ICAgIGMxLjAxMSwwLjM1OCwyLjA0MiwwLjU3NywzLjEzMywwLjU3N2MxLjA5MywwLDIuMTI1LTAuMjEzLDMuMTM0LTAuNTcybC0yLjA3NCwyLjM2OWgtMC4wNDlsNS4zMzcsMTIuODk1bC02LjM0OCw2LjMzMiAgICBsLTYuMzQxLTYuMzMyTDcwLjY2Nyw1MC45MzN6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />&nbsp;My CV
+                    </a>
+                    <!-- <p class="down-btn top">Click to View</p> -->
+                    <p class="down-btn bottom">Click to View</p>
+                </div>
+            </div>
+            <div class="w3-col m7 w3-container w3-section">
+                <script type="text/javascript" src="https://form.jotform.me/jsform/62264629214455"></script>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!--
+    <footer class="w3-center w3-dark-grey w3-padding-48 w3-hover-black">
+      <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p>
+    </footer>
+     -->
+
+    <script>
+        $(function () {
+            $('#CV').popover(
+                {
+                    trigger: 'hover',
+                    html: true,
+                    placement: 'left',
+                    animation: false
+                });
+        });
+    </script>
+
+    <!-- Add Google Maps -->
+    <script src="js/api.map.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>-->
+    <script>
+        var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+        function initialize() {
+            var mapProp = {
+                center: myCenter,
+                zoom: 12,
+                scrollwheel: false,
+                draggable: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+
+            marker.setMap(map);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-navbar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+            }
+        }
+    </script>
+    <script>
+        function goToByScroll(id) {
+            // Scroll
+            $('html,body').animate({
+                scrollTop: $(id).offset().top
+            },
+                'slow');
+        }
+
+        $("#navbar > ul > li > a").click(function (e) {
+            // Prevent a page reload when a link is pressed
+            //var str1='CV';
+            //var str2=e.id;
+            //if(str1 != str2)
+            e.preventDefault();
+
+            // Call the scroll function
+            goToByScroll($(this).attr("href"));
+        });
+        $('#CV').unbind('click');
+    </script>
+    <script>
+        function hover() {
+            document.getElementById('imgCV').setAttribute('src', 'images/cvblack.png');
+        }
+        function unhover(element) {
+            document.getElementById('imgCV').setAttribute('src', 'images/cvblue.png');
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        var timeoutHandle;
+        var SSNum;
+        //showDivs(slideIndex);
+        //carousel();
+        sendModalNum('1');
+        sendModalNum('2');
+        sendModalNum('3');
+        sendModalNum('5');
+        function sendModalNum(num) {
+            SSNum = num;
+            slideIndex = 1;
+            showDivs(slideIndex);
+            //carousel();
+        }
+
+        function plusDivs(n, slideShowNum) {
+            SSNum = slideShowNum;
+            showDivs(slideIndex += n);
+            //window.clearTimeout(timeoutHandle);
+            //timeoutHandle = window.setTimeout(carousel, 3000);
+        }
+
+        function currentDiv(n, slideShowNum) {
+            SSNum = slideShowNum;
+            showDivs(slideIndex = n);
+            //window.clearTimeout(timeoutHandle);
+            //timeoutHandle = window.setTimeout(carousel, 3000);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides" + SSNum);
+            var dots = document.getElementsByClassName("demo" + SSNum);
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-blue", "w3-blue-grey");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-blue";
+        }
+
+            /*function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides" + SSNum);
+                var dots = document.getElementsByClassName("demo" + SSNum);
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-blue", "");
+                }
+
+                if (slideIndex > x.length) {
+                    slideIndex = 1;
+                }
+                x[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " w3-blue";
+                slideIndex++;
+                timeoutHandle = window.setTimeout(carousel, 3000); // Change image every 3 seconds
+            }*/
+    </script>
+    <!--<script>
+        document.getElementsByTagName("body").onload = function () {
+            var previousURL = document.referrer;
+            document.getElementById("GoBack").setAttribute('href', previousURL);
+        }
+    </script>-->
+    <script>
+        var scrollPos = 0;
+
+        $('.w3-modal')
+            .on('show.bs.w3-modal', function () {
+                scrollPos = $('body').scrollTop();
+                $('body').css({
+                    overflow: 'hidden',
+                    position: 'fixed',
+                    top: -scrollPos
+                });
+            })
+            .on('hide.bs.w3-modal', function () {
+                $('body').css({
+                    overflow: '',
+                    position: '',
+                    top: ''
+                }).scrollTop(scrollPos);
+            });
+    </script>
+    <script type="text/javascript">
+        disableScroll.on();
+        $(window).load(function () {
+            $(".loader").fadeOut("slow");
+            disableScroll.off();
+        })
+    </script>
+</body>
+</html>
